@@ -1,0 +1,79 @@
+﻿<div class="wrap"> 
+	<form method="post" action="">
+		<fieldset>
+			<legend><strong>Flash carousel <?php echo $id; ?>. Write in your Posts: [flash_image_carousel <?php echo $id; ?> /]</strong></legend>
+			<p><br/>
+			  <label for="row<?php echo $id; ?>" accesskey="r">Rows(1-4): 
+			    <input type='text' id='row<?php echo $id; ?>'  name='row<?php echo $id; ?>'  value='<?php echo $row; ?>'/>
+		      </label>
+			  <br/>
+			  <label for="folder<?php echo $id; ?>" accesskey="f">Images Folder(Sample: images/): 
+			    <input type='text' id='folder<?php echo $id; ?>'  name='folder<?php echo $id; ?>'  value='<?php echo $folder; ?>'/>
+		      </label>
+			  <br/>
+			  <label for="zoom<?php echo $id; ?>" accesskey="z">Zoom(1-5): 
+			    <input type='text' id='zoom<?php echo $id; ?>'  name='zoom<?php echo $id; ?>'  value='<?php echo $zoom; ?>'/>
+		      </label>
+			  <br/>
+			  <label for="speed<?php echo $id; ?>" accesskey="s">Speed: 
+			    <input type='text' id='speed<?php echo $id; ?>'  name='speed<?php echo $id; ?>'  value='<?php echo $speed; ?>'/>
+		      </label>
+			  <br/>
+
+			  <label>Images Mouse Effect:
+			    <select name="onover<?php echo $id; ?>" id="onover<?php echo $id; ?>">
+			      <option value="0" <?php if($onover==0) echo ' selected="selected"'; ?>>None</option>
+			      <option value="1" <?php if($onover==1) echo ' selected="selected"'; ?>>Y Rotation</option>
+			      <option value="2" <?php if($onover==2) echo ' selected="selected"'; ?>>X Rotation</option>
+			      <option value="3" <?php if($onover==3) echo ' selected="selected"'; ?>>Scale</option>
+		        </select>
+		      </label>
+			  <br/>
+
+			  <label>
+			    <input name="vertical<?php echo $id; ?>" type="checkbox" id="vertical<?php echo $id; ?>" value="0" <?php if($vertical==0) echo ' checked="checked"'; ?> />
+			    Vertical movement</label>
+			  <br/>
+              <label>
+			    <input name="transparency<?php echo $id; ?>" type="checkbox" id="transparency<?php echo $id; ?>" value="0" <?php if($transparency==0) echo ' checked="checked"'; ?> />
+			    Images transparency</label>
+			  <br/>
+                            <label>
+			    <input name="imageslink<?php echo $id; ?>" type="checkbox" id="imageslink<?php echo $id; ?>" value="1" <?php if($imageslink==1) echo ' checked="checked"'; ?> />
+			    Images link</label>
+              <input name="id" type="hidden" id="id" value="<?php echo $id; ?>" />
+              <br/>
+			  <label for="width<?php echo $id; ?>" accesskey="o">Flash Width(px or %, default: 100%): 
+			    <input type='text' id='width<?php echo $id; ?>'  name='width<?php echo $id; ?>'  value='<?php echo $width; ?>'/>
+		      </label>
+			  <br/>
+			  <label for="height<?php echo $id; ?>" accesskey="o">Flash Height (px, default 250px): 
+			    <input type='text' id='height<?php echo $id; ?>'  name='height<?php echo $id; ?>'  value='<?php echo $height; ?>'/>
+		      </label>
+		  </p>
+<p><br/>
+			  <label for="links<?php echo $id; ?>" accesskey="o">Image Links(separated by INTRO): 
+			    <textarea name="links<?php echo $id; ?>" rows="5" id="links<?php echo $id; ?>"><?php echo $links; ?></textarea>
+		      </label>
+		  </p>
+			<p><br/>
+			  <label for="titles<?php echo $id; ?>" accesskey="o">Image titles(separated by INTRO): 
+			    <textarea name="titles<?php echo $id; ?>" rows="5" id="titles<?php echo $id; ?>"><?php echo $titles; ?></textarea>
+		      </label>
+		  </p>
+			<p><br/>
+			  <label for="target<?php echo $id; ?>" accesskey="o">Link target: 
+			    <input type='text' id='target<?php echo $id; ?>'  name='target<?php echo $id; ?>'  value='<?php echo $target; ?>'/>
+		      </label>
+		  </p>
+			<p><br/>
+			  <input type='submit' name='' value='SAVE CAROUSEL <?php echo $id; ?>' />
+		  </p>
+        </fieldset>
+	</form>
+  <form method="post" action="">
+	  <input name="borrar" type="hidden" id="borrar" value="<?php echo $id; ?>">
+     <input type='submit' name='' value='Delete carousel <?php echo $id; ?>' />
+    </form>
+  <hr />
+</div>
